@@ -68,7 +68,7 @@ export const getPostsByUser = async (req: Request, res: Response) => {
 
         // Lägg til paginering
         const page = parseInt(req.query.page as string) || 1;
-        const limit = parseInt(req.query.limit as string) || 10;    
+        const limit = parseInt(req.query.limit as string) || 1100;    
 
         const result = await prisma.post.findMany({
             where: {
